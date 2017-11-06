@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700');
+
+
+@mixin Ubuntu($style: regular) {
+	@if $style == regular {
+		
+		font-family: Ubuntu;
+		font-weight: 400;
+		font-size: 14px;
+	}
+	@if $style == light {
+		
+		font-family: Ubuntu;
+		font-weight: 300;
+		font-size: 14px;
+	}
+	@if $style == bold {
+		
+		font-family: Ubuntu;
+		font-weight: 700;
+		font-size: 14px;
+	}
+}
