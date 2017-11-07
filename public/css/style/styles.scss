@@ -258,7 +258,6 @@ body {
 }
 
 .categories__item-inner {
-	// margin-left: 13px;
 	position: relative;
 	color: $redcolor;
 	margin: 14px 13px;
@@ -374,7 +373,6 @@ body {
 	width: 280px;
 	padding: 0 11px;
 	@include placeholder($darkgreycolor);
-	// float: right;
 }
 
 .search-tasks__search {
@@ -449,7 +447,6 @@ body {
 		&:hover {
 			cursor: pointer;
 		}
-		// margin: 17px 0;
 	}
 }
 
@@ -490,12 +487,6 @@ body {
 	line-height: 28px;
 
 }
-
-// .page-of-tasks__link {
-	
-// }
-
-
 
 .count-of-tasks__text-span, .count-of-tasks__count-link {
 	padding-left: 10px;
