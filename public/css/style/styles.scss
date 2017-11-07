@@ -1,0 +1,615 @@
+* {
+	box-sizing: border-box;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	@include Ubuntu(regular);
+	text-decoration: none;
+	list-style: none;
+	outline: none;
+}
+
+$redcolor: #ff340d;
+$blackcolor: #000;
+$graycolor: #efefef;
+$whitecolor: #fff;
+$darkgreycolor: #999;
+
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	background: $graycolor;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.empty {
+	height: 138px;
+}
+
+.container {
+	width: 1208px;
+	margin: 0 auto;
+}
+
+.footer {
+	height: 138px;
+	margin-top: -138px;
+	position: relative;
+}
+
+
+//////header
+
+.header__logo {
+	width: 208px;
+}
+
+.header__caption {
+	
+	width: 500px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-left: 208px;
+}
+
+.header__profile {
+
+	width: 500px;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+}
+
+.header__logo, .header__caption {
+	float: left;
+}
+
+.header {
+	background: $whitecolor;
+	padding: 18px 0px;
+	margin-bottom: 30px;
+}
+
+.container {
+	@include clearfix;
+	position: relative;
+}
+
+.logo__pic {
+	display: block;
+}
+
+.header__caption-text {
+	vertical-align: middle;
+	position: relative;
+	color: $redcolor;
+	@include Ubuntu(bold);
+	&:after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		display: block;
+		position: absolute;
+		top: 0;
+		right: -20px;
+		bottom: 0;
+		background: url('../image/mnogoug_gray.png');
+	}
+}
+
+.header__profile-link {
+	color: $redcolor;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 20px;
+	&:after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		display: block;
+		position: absolute;
+		top: 2px;
+		right: -20px;
+		bottom: 0;
+		background: url('../image/mnogoug_gray.png');
+	}
+}
+
+.header__profile-pic {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.header__profile-name {
+	vertical-align: middle;
+}
+
+
+/////////title
+
+.section-title {
+	margin-bottom: 30px;
+}
+
+.section-title__add-task, .section-title__barcelona {
+	float: left;
+}
+
+.section-title__add-task {
+	width: 208px;
+}
+
+.section-title__barcelona {
+	width: 1000px;
+	position: relative;
+}
+
+.section-title__button {
+	width: 168px;
+	height: 38px;
+	background: $redcolor;
+	color: $whitecolor;
+	@include Ubuntu(bold);
+	font-size: 12px;
+	text-transform: uppercase;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.section-title__pic {
+	display: block;
+	margin-right: 20px;
+}
+
+.section-title__pic, .section-title__title {
+	float: left;
+	vertical-align: middle;
+}
+
+.section-title__title {
+	line-height: 38px;
+	@include Ubuntu(bold);
+	font-size: 30px;
+	position: relative;
+	&:after {
+		position: absolute;
+		content: "";
+		display: block;
+		width: 30px;
+		height: 30px;
+		right: -25px;
+		top: 4px;
+		background: url('../image/mnogoug.png') center center no-repeat;
+	}
+}
+
+//////main
+
+.clearfix {
+	width: 100%;
+	@include clearfix;
+}
+
+.sidebar {
+	float: left;
+	width: 208px;
+	padding-right: 40px;
+}
+
+.categories {
+	background: $whitecolor;
+}
+
+.categories__info {
+	@include Ubuntu(light);
+	color: $darkgreycolor;
+	font-size: 11px;
+	padding: 26px 29px 16px 29px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #dadada;
+	line-height: 1.5;
+}
+
+.categories__item {
+	@include Ubuntu(bold);
+	border-bottom: 1px solid #dadada;
+	padding: 20px 29px;
+	position: relative;
+	&:last-child {
+		color: $redcolor;
+		border: none;
+	}
+}
+
+.categories__item_selected {
+	&:before {
+		position: absolute;
+		display: block;
+		content: "";
+		width: 30px;
+		height: 30px;
+		background: url('../image/triangle.png');
+		top: 13px;
+		right: -20px;
+	}
+}
+
+.categories__inner {
+	@include Ubuntu(bold);
+	color: $whitecolor;
+	
+
+}
+
+.categories__item-inner {
+	// margin-left: 13px;
+	position: relative;
+	color: $redcolor;
+	margin: 14px 13px;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -18px;
+		height: 15px;
+		width: 15px;
+		background: url('../image/list-image.png') no-repeat center center;
+	}
+	&:last-child {
+		margin: 0 13px;
+	}
+}
+
+.content {
+	float: left;
+	width: 1000px;
+	position: relative;
+	background: $whitecolor;
+	margin-bottom: 30px;
+	@include clearfix;
+}
+
+.content-title {
+	padding: 0 30px;
+	position: relative;
+	height: 75px;
+	border-bottom: 1px solid #dadada;
+}
+
+.content-title__title, .content-title__count, .content-title__add-task {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 75px;
+}
+
+.content-title__title {
+	margin-right: 28px;
+	font-size: 22px;
+}
+
+.content-title__count {
+	@include Ubuntu(light);
+	font-size: 22px;
+	color: $darkgreycolor;
+}
+
+.content-title__add-task {
+	padding-right: 30px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	top: 0;
+}
+
+.content-title__add-task-pic-wrapper {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+.content-title__add-task-pic {
+	position: absolute;
+	top: 0;
+	bottom: -4px;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+
+.content-title__add-task-text {
+	margin-left: 25px;
+	vertical-align: middle;
+	color: $redcolor;
+}
+
+.search-tasks {
+	padding: 20px 30px;
+	font-size: 14px;
+	border-bottom: 1px solid #dadada;
+}
+
+.search-tasks__input-date {
+	display: inline-block;
+	height: 30px;
+	width: 153px;
+	border: 1px solid #dadada;
+	margin-right: 20px;
+	padding-left: 11px;
+	@include placeholder($whitecolor);
+}
+
+.search-tasks__select {
+	display: inline-block;
+	height: 30px;
+	width: 201px;
+	border: 1px solid #dadada;
+	padding: 0 11px;
+	@include placeholder($whitecolor);
+}
+
+.search-tasks__input-search {
+	float: right;
+	display: inline-block;
+	border: 1px solid #dadada;
+	height: 30px;
+	width: 280px;
+	padding: 0 11px;
+	@include placeholder($darkgreycolor);
+	// float: right;
+}
+
+.search-tasks__search {
+	float: right;
+	position: relative;
+	display: inline-block;
+}
+
+.search-tasks__input-submit {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	right: 2px;
+	background: url('../image/search.png') no-repeat center center;
+}
+
+.table-wrapper {
+	margin: 0 30px;
+	width: 940px;
+	max-width: 940px;
+	overflow: hidden;
+}
+
+.table-tasks {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+
+	td {
+		padding: 17px 10px 17px 0;
+		border-bottom: 1px solid #dadada;
+		@include Ubuntu(light);
+
+		&:nth-child(3) {
+			max-width: 150px;
+			overflow: hidden;
+			span {
+				white-space: nowrap;
+			}
+
+		}
+		&:nth-child(4) {
+			padding-left: 10px;
+			img {
+				width: 7px;
+				height: 7px;
+			}
+		}
+		img {
+			display: block;
+		}
+
+	}
+	.sorted:after {
+		content: "";
+	    display: block;
+	    position: absolute;
+	    background: url("../image/mnogoug_gray.png");
+	    width: 20px;
+	    height: 20px;
+	    top: -3px;
+	    right: -15px;
+	}
+
+	tr button{
+		position: relative;
+		&:first-child {
+			background: $whitecolor;
+			color: $darkgreycolor;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+		// margin: 17px 0;
+	}
+}
+
+
+.pages-and-counts {
+	padding: 0 30px;
+	margin-bottom: 30px;
+	font-size: 14px;
+	@include clearfix;
+}
+
+.pages-of-tasks {
+	float: left;
+
+	button {
+		display: inline-block;
+		margin-right: 10px;
+		width: 28px;
+		height: 28px;
+		background: $graycolor;
+		color: $blackcolor;
+		text-align: center;
+		line-height: 28px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.selectedPage {
+		background: $redcolor;
+		color: $whitecolor;
+	}
+
+}
+
+.count-of-tasks {
+	float: right;
+	line-height: 28px;
+
+}
+
+// .page-of-tasks__link {
+	
+// }
+
+
+
+.count-of-tasks__text-span, .count-of-tasks__count-link {
+	padding-left: 10px;
+}
+
+.count-of-tasks__count-link {
+	color: #029cfe;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.count-of-tasks__count-link_selected {
+	color: $blackcolor;
+}
+
+.contacts {
+	margin-left: 208px;
+	@include clearfix;
+	background: $whitecolor;
+}
+
+.contacts__questions, .contacts__adress {
+	float: left;
+	width: 500px;
+	text-transform: uppercase;
+}
+
+.contacts__questions {
+	background: $redcolor;
+	padding: 80px 64px;
+}
+
+.contacts__questions-title {
+	@include Ubuntu(bold);
+	font-size: 24px;
+	color: $whitecolor;
+	display: block;
+	margin-bottom: 30px;
+}
+
+.contacts__adress-title {
+	@include Ubuntu(bold);
+	font-size: 24px;
+	color: $blackcolor;
+	display: block;
+	margin-bottom: 30px;
+}
+
+.contacts__questions-text {
+	@include Ubuntu(light);
+	color: $whitecolor;
+	font-size: 18px;
+	display: block;
+	margin-bottom: 30px;
+}
+
+.contacts__adress-text {
+	@include Ubuntu(light);
+	color: $blackcolor;
+	font-size: 18px;
+	display: block;
+	margin-bottom: 30px;
+}
+
+.contacts__questions-request-link {
+	display: block;
+	height: 38px;
+	width: 163px;
+	background: $whitecolor;
+	color: $blackcolor;
+	text-align: center;
+	line-height: 38px;
+}
+
+.contacts__adress-mail {
+	color: #009bff;
+}
+
+.contacts__adress {
+	background: $whitecolor;
+	padding: 80px 64px;
+}
+
+
+/////////////footer
+
+.footer {
+	line-height: 138px;
+}
+
+.footer__copy {
+	margin-left: 208px;
+	margin-right: 117px;
+	font-size: 13px;
+	color: $darkgreycolor;
+}
+
+.footer__phone {
+	font-size: 13px;
+	color: $blackcolor;
+}
+
+.footer__icon-fb, .footer__icon-vk {
+	float: right;
+	height: 138px;
+	width: 19px;
+}
+
+.footer__icon-fb {
+	background: url('../image/znak_fb.png') center center no-repeat;
+	margin-right: 15px;
+}
+
+.footer__icon-vk {
+	background: url('../image/znak_vk.png') center center no-repeat;
+}

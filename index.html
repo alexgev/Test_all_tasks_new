@@ -3,7 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Barcelona Design</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/main.css">
+	<script src="./script.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -79,8 +81,8 @@
 							</a>
 						</div>
 						<div class="search-tasks">
-							<input class="search-tasks__input-date" type="month" value="2015-12">
-	                        <select class="search-tasks__select">
+							<input class="search-tasks__input-date" type="month">
+	                        <select class="search-tasks__select" onchange="checkTypeOfTasks()">
 	                            <option value="open-tasks">Открытые задачи</option>
 	                            <option value="completed-tasks">Выполненные задачи</option>
 	                        </select>
@@ -92,7 +94,7 @@
 						<div class="table-wrapper">
 							<table class="table-tasks">
 								<tr>
-									<td>Т</td>
+								<!-- 	<td>Т</td>
 									<td>Тикет</td>
 									<td>Название</td>
 									<td>П</td>
@@ -309,35 +311,35 @@
 									<td>Решено</td>
 									<td>07.03.15</td>
 									<td>07.03.15</td>
-									<td>07.03.15</td>
+									<td>07.03.15</td> -->
 								</tr>
 							</table>
 						</div>
 						<div class="pages-and-counts">
 							<div class="pages-of-tasks">
-								<span class="page-of-tasks-button"><a href="" class="page-of-tasks__link page-of-tasks__link_selected">1</a></span>
-								<span class="page-of-tasks-button"><a href="" class="page-of-tasks__link">2</a></span>
-								<span class="page-of-tasks-button"><a href="" class="page-of-tasks__link">3</a></span>
-								<span class="page-of-tasks-button"><a href="" class="page-of-tasks__link">4</a></span>
-								<span class="page-of-tasks-button"><a href="" class="page-of-tasks__link">5</a></span>
-								<span class="page-of-tasks-button"><a href="" class="page-of-tasks__link">...</a></span>
-								<span class="page-of-tasks-button"><a href="" class="page-of-tasks__link">32</a></span>
+								<!-- <span class="page-of-tasks-button"><a class="page-of-tasks__link page-of-tasks__link_selected">1</a></span>
+								<span class="page-of-tasks-button"><a class="page-of-tasks__link">2</a></span>
+								<span class="page-of-tasks-button"><a class="page-of-tasks__link">3</a></span>
+								<span class="page-of-tasks-button"><a class="page-of-tasks__link">4</a></span>
+								<span class="page-of-tasks-button"><a class="page-of-tasks__link">5</a></span>
+								<span class="page-of-tasks-button"><a class="page-of-tasks__link">...</a></span>
+								<span class="page-of-tasks-button"><a class="page-of-tasks__link">32</a></span> -->
 							</div>
 							<div class="count-of-tasks">
 								<span class="count-of-tasks__text-span">
 									Количество задач:
 								</span>
 								<span class="count-of-tasks__count ">
-									<a class="count-of-tasks__count-link count-of-tasks__count-link_selected" href="">20</a>
+									<a class="count-of-tasks__count-link count-of-tasks__count-link_selected">20</a>
 								</span>
 								<span class="count-of-tasks__count">
-									<a class="count-of-tasks__count-link" href="">50</a>
+									<a class="count-of-tasks__count-link">50</a>
 								</span>
 								<span class="count-of-tasks__count">
-									<a class="count-of-tasks__count-link" href="">100</a>
+									<a class="count-of-tasks__count-link">100</a>
 								</span>
 								<span class="count-of-tasks__count">
-									<a class="count-of-tasks__count-link" href="">все</a>
+									<a class="count-of-tasks__count-link">все</a>
 								</span>
 							</div>
 						</div>
